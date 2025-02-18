@@ -92,6 +92,7 @@ public class WindowProject4 extends JFrame implements ActionListener {
 		btnSend = new JButton("Enviar");
 		btnSend.setBounds(156, 227, 89, 23);
 		contentPane.add(btnSend);
+		btnSend.addActionListener(this);
 
 		textFieldNom = new JTextField();
 		textFieldNom.setBounds(113, 72, 86, 20);
