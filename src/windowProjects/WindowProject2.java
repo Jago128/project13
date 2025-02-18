@@ -19,7 +19,6 @@ public class WindowProject2 extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
-	private JButton btnNewButton_2;
 	private JLabel lblNewLabel_1;
 
 	/**
@@ -66,7 +65,7 @@ public class WindowProject2 extends JFrame implements ActionListener {
 		contentPane.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(this);
 		
-		btnNewButton_2 = new JButton("Quizas");
+		JButton btnNewButton_2 = new JButton("Quizas");
 		btnNewButton_2.setBounds(293, 74, 89, 23);
 		contentPane.add(btnNewButton_2);
 		btnNewButton_2.addActionListener(this);
