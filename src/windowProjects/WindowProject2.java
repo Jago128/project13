@@ -41,6 +41,7 @@ public class WindowProject2 extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public WindowProject2() {
+		setTitle("Window 2");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
