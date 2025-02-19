@@ -8,7 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class e extends JDialog {
+public class WindowProject extends JDialog {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -18,7 +18,7 @@ public class e extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			e dialog = new e();
+			WindowProject dialog = new WindowProject();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -29,7 +29,7 @@ public class e extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public e() {
+	public WindowProject() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setLayout(new FlowLayout());
