@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 
@@ -48,11 +49,11 @@ public class WindowProject7 extends JFrame implements ActionListener {
 		
 		lblButtonCheck = new JLabel("No se ha pulsado un boton");
 		lblButtonCheck.setHorizontalAlignment(SwingConstants.CENTER);
-		lblButtonCheck.setBounds(108, 48, 222, 54);
+		lblButtonCheck.setBounds(63, 48, 299, 54);
 		contentPane.add(lblButtonCheck);
 		
 		btnClick = new JButton("Click aqui");
-		btnClick.setBounds(177, 130, 89, 23);
+		btnClick.setBounds(175, 113, 89, 23);
 		contentPane.add(btnClick);
 		btnClick.addActionListener(this);
 	}
@@ -60,8 +61,26 @@ public class WindowProject7 extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==btnClick) {
+			int option=JOptionPane.showConfirmDialog(btnClick, "Prueba de Cuadros de Diálogo", "Cuadro de Diálogo de Confirmación", JOptionPane.YES_NO_CANCEL_OPTION);
 			
+			switch (option) {
+			
+			case JOptionPane.YES_OPTION:
+				lblButtonCheck.setText("Se ha pulsado la opcion Si.");
+				break;
+				
+			case JOptionPane.NO_OPTION:
+				lblButtonCheck.setText("Se ha pulsado la opcion No.");
+				break;
+				
+			case JOptionPane.CANCEL_OPTION:
+				lblButtonCheck.setText("Se ha pulsado la opcion Cancelar.");
+				break;
+				
+			case JOptionPane.CLOSED_OPTION:
+				lblButtonCheck.setText("Error, no se ha pulsado una opcion valida.");
+				break;
+			}
 		}
 	}
-
 }

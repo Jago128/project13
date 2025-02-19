@@ -60,9 +60,8 @@ public class WindowProject6 extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String name;
 		if (e.getSource()==btnChange) {
-			name=(String)JOptionPane.showInputDialog(contentPane,(String)"Introduzca su Nombre: ","Cuadro de Diálogo de Introducción de Datos",JOptionPane.QUESTION_MESSAGE, null, null, "Sin Nombre");
+			String name=(String)JOptionPane.showInputDialog(contentPane, "Introduzca su Nombre:", "Cuadro de Diálogo de Introducción de Datos", JOptionPane.QUESTION_MESSAGE, null, null, "Sin Nombre");
 			if (name!=null) {
 				lblAnon.setText("Hola "+name);
 			} else {
