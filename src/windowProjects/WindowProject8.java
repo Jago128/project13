@@ -65,7 +65,7 @@ public class WindowProject8 extends JFrame implements ActionListener {
 			int choice=JOptionPane.showOptionDialog(contentPane, "Prueba de Cuadros de Diálogo", "Cuadro de Diálogo con opciones personalizadas", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[2]);
 
 			if (choice!=JOptionPane.CLOSED_OPTION) {
-				lblChoices.setText("Se ha elegido la opcion "+options[choice]+".");
+				lblChoices.setText("Se ha elegido la opcion "+options[choice]);
 			} else {
 				lblChoices.setText("Error, no se ha elegido un valor valido.");
 			}
