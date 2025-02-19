@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
@@ -128,17 +129,14 @@ public class WindowProject4 extends JFrame implements ActionListener {
 		}
 
 		if (chckbxEuskera.isSelected()) {
-			lang1="Euskera";
+			lang2="Euskera";
 		}
 		if (chckbxIngles.isSelected()) {
-			lang1="Ingles";
+			lang3="Ingles";
 		}
 		
 		if (e.getSource()==btnSend) {
-			JDialog d=new JDialog();
-			d.setTitle("Bienvenido "+choice+" "+textFieldNom.getText()+" "+textFieldApe.getText());
-			
-
+			JOptionPane.showMessageDialog(contentPane, "", "Bienvenido "+choice+" "+textFieldNom.getText()+" "+textFieldApe.getText(), JOptionPane.INFORMATION_MESSAGE);;			
 		}
 	}
 }
