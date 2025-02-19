@@ -8,16 +8,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 
-public class WindowProject6 extends JFrame implements ActionListener {
+public class WindowProject7 extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
-
+	
 	private JPanel contentPane;
-	private JButton btnChange;
-	private JLabel lblAnon;
+	private JButton btnClick;
+	private JLabel lblButtonCheck;
 
 	/**
 	 * Launch the application.
@@ -26,7 +25,7 @@ public class WindowProject6 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WindowProject6 frame = new WindowProject6();
+					WindowProject7 frame = new WindowProject7();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +37,7 @@ public class WindowProject6 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public WindowProject6() {
+	public WindowProject7() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -46,28 +45,23 @@ public class WindowProject6 extends JFrame implements ActionListener {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		lblAnon = new JLabel("Anonimo");
-		lblAnon.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAnon.setBounds(37, 55, 358, 54);
-		contentPane.add(lblAnon);
-
-		btnChange = new JButton("Nombre");
-		btnChange.setBounds(174, 124, 89, 23);
-		contentPane.add(btnChange);
-		btnChange.addActionListener(this);
+		
+		lblButtonCheck = new JLabel("No se ha pulsado un boton");
+		lblButtonCheck.setHorizontalAlignment(SwingConstants.CENTER);
+		lblButtonCheck.setBounds(108, 48, 222, 54);
+		contentPane.add(lblButtonCheck);
+		
+		btnClick = new JButton("Click aqui");
+		btnClick.setBounds(177, 130, 89, 23);
+		contentPane.add(btnClick);
+		btnClick.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String name;
-		if (e.getSource()==btnChange) {
-			name=(String)JOptionPane.showInputDialog(contentPane,(String)"Introduzca su Nombre: ","Cuadro de Diálogo de Introducción de Datos",JOptionPane.QUESTION_MESSAGE, null, null, "Sin Nombre");
-			if (name!=null) {
-				lblAnon.setText("Hola "+name);
-			} else {
-				lblAnon.setText("Error, no se ha introducido un valor valido");
-			}
+		if (e.getSource()==btnClick) {
+			
 		}
 	}
+
 }
