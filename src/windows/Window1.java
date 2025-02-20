@@ -1,4 +1,4 @@
-package windowProjects;
+package windows;
 
 import java.awt.*;
 import javax.swing.*;
@@ -6,7 +6,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.event.*;
 
 
-public class WindowProject1 extends JFrame implements ActionListener {
+public class Window1 extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	private JPanel contentPane;
@@ -20,7 +20,7 @@ public class WindowProject1 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WindowProject1 frame = new WindowProject1();
+					Window1 frame = new Window1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class WindowProject1 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public WindowProject1() {
+	public Window1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

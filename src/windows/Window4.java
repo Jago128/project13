@@ -1,4 +1,4 @@
-package windowProjects;
+package windows;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -11,12 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
-import javax.swing.JDialog;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 
-public class WindowProject4 extends JFrame implements ActionListener {
+public class Window4 extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -36,7 +35,7 @@ public class WindowProject4 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WindowProject4 frame = new WindowProject4();
+					Window4 frame = new Window4();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +47,7 @@ public class WindowProject4 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public WindowProject4() {
+	public Window4() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -125,18 +124,18 @@ public class WindowProject4 extends JFrame implements ActionListener {
 		}
 
 		if (chckbxCastellano.isSelected()) {
-			lang1="Castellano";
+			lang1="Castellano ";
 		}
 
 		if (chckbxEuskera.isSelected()) {
-			lang2="Euskera";
+			lang2="Euskera ";
 		}
 		if (chckbxIngles.isSelected()) {
-			lang3="Ingles";
+			lang3="Ingles ";
 		}
 		
 		if (e.getSource()==btnSend) {
-			JOptionPane.showMessageDialog(contentPane, "", "Bienvenido "+choice+" "+textFieldNom.getText()+" "+textFieldApe.getText(), JOptionPane.INFORMATION_MESSAGE);;			
+			JOptionPane.showMessageDialog(contentPane, lang1+""+lang2+""+lang3+"son los idiomas que conoces.", "Bienvenido "+choice+" "+textFieldNom.getText()+" "+textFieldApe.getText(), JOptionPane.INFORMATION_MESSAGE);;			
 		}
 	}
 }

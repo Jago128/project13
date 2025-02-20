@@ -1,4 +1,4 @@
-package windowProjects;
+package windows;
 
 import java.awt.EventQueue;
 
@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class WindowProject3 extends JFrame implements ActionListener {
+public class Window3 extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	
 	private JPanel contentPane;
@@ -33,7 +33,7 @@ public class WindowProject3 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WindowProject3 frame = new WindowProject3();
+					Window3 frame = new Window3();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +45,7 @@ public class WindowProject3 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public WindowProject3() {
+	public Window3() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\ltrabado\\Desktop\\descarga.jfif"));
 		setTitle("Mi quinta Ventana");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,4 +1,4 @@
-package windowProjects;
+package windows;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -8,7 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class WindowProject extends JDialog {
+public class Window extends JDialog {
 
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
@@ -18,7 +18,7 @@ public class WindowProject extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			WindowProject dialog = new WindowProject();
+			Window dialog = new Window();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -29,7 +29,7 @@ public class WindowProject extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public WindowProject() {
+	public Window() {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setLayout(new FlowLayout());
